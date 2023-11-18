@@ -10,6 +10,16 @@ dependencies:
   get: ^4.6.6
   flutter: 
     sdk: flutter
+  shared_preferences: ^2.2.2
+  dio: ^5.3.3
+  logger: ^2.0.2+1
+  pinput: ^3.0.1
+  flutter_svg: ^2.0.9
+  flutter_screenutil: ^5.9.0
+  flutter_native_splash: ^2.3.5
+  cached_network_image: ^3.3.0
+  image_cropper: ^5.0.0
+  image_picker: ^1.0.4
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
