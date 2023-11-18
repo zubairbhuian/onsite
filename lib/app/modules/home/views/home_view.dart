@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:onsite/app/core/config/theme/fonts.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,11 +14,21 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: const Column(
+        children: [
+          Center(
+            child: Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,fontFamily: Fonts.primary),
+            ),
+          ),
+            Center(
+            child: Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),
+            ),
+          ),
+        ],
       ),
     );
   }

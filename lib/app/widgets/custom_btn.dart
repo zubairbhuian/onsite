@@ -104,7 +104,7 @@ class OutLineBtn extends StatelessWidget {
             textStyle: textStyle ??
                 TextStyle(
                     color: kRed,
-                    fontFamily: Fonts.poppins,
+                    fontFamily: Fonts.primary,
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w500),
             shape: RoundedRectangleBorder(

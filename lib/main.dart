@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
           transitionDuration: const Duration(milliseconds: 500),
           title: 'Mr.Xpert',
           theme: ThemeData(
-            fontFamily: Fonts.rubik,
+            fontFamily: Fonts.primary,
             primarySwatch: Colors.blue,
             splashColor: kPrimaryColor.withOpacity(.1),
             appBarTheme: const AppBarTheme(color: Color(0xff333333)),

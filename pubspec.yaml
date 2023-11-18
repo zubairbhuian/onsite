@@ -29,3 +29,24 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+  assets:
+    - assets/images/
+    - assets/images/
+    - assets/logos/
+    - assets/icons/
+
+  fonts:
+    - family: SF_Pro
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Black.otf
+          weight: 800
+        - asset: assets/fonts/SF-Pro-Text-Bold.otf
+          weight: 700
+        - asset: assets/fonts/SF-Pro-Text-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400
+        - asset: assets/fonts/SF-Pro-Text-Thin.otf
+          weight: 300

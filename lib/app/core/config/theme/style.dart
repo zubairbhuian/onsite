@@ -16,33 +16,33 @@ TextStyle kHeadlineLarge = TextStyle(
     color: kTextColor,
     fontSize: 32.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
 TextStyle kHeadlineMedium = TextStyle(
     color: kTextColor,
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
 TextStyle headlineSmall = TextStyle(
     color: kTextColor,
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
 // ******* title ***********
 TextStyle kTitleLarge = TextStyle(
     color: kTextColor,
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
-    fontFamily: Fonts.rubik);
+    fontFamily: Fonts.primary);
 TextStyle kTitleMedium = TextStyle(
     color: kTextColor,
     fontSize: 18.sp,
     fontWeight: FontWeight.w400,
-    fontFamily: Fonts.rubik);
+    fontFamily: Fonts.primary);
 TextStyle kTitleSmall = TextStyle(
     color: kTextColor,
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
-    fontFamily: Fonts.rubik);
+    fontFamily: Fonts.primary);
 // ******* body ********
 TextStyle kBodyLarge = TextStyle(
     color: kTextColor, fontSize: 16.spMax, fontWeight: FontWeight.w400);
@@ -55,14 +55,14 @@ TextStyle kLabelLarge = TextStyle(
     color: kTextColor,
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
 TextStyle kLabelMedium = TextStyle(
     color: kTextColor,
     fontSize: 14.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
 TextStyle kLabelSmall = TextStyle(
     color: kTextColor,
     fontSize: 12.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: Fonts.poppins);
+    fontFamily: Fonts.primary);
