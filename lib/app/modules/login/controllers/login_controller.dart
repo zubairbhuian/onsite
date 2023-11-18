@@ -1,23 +1,17 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:onsite/app/core/config/theme/style.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
+  static LoginController get to => Get.find();
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  bool isLoaded = true;
+  bool isClicked = false; //dual click checker
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  bool isReadyToRegester = false;
+  bool passObscure = true;
+  final emailOrUserNameController = TextEditingController();
+  final passwordController = TextEditingController();
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
-  void increment() => count.value++;
 }

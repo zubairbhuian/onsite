@@ -19,7 +19,7 @@ TextStyle kHeadlineLarge = TextStyle(
 TextStyle kHeadlineMedium = TextStyle(
   color: kTextColor,
   fontSize: 24.sp,
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w700,
 );
 TextStyle headlineSmall = TextStyle(
   color: kTextColor,

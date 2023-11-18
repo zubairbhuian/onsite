@@ -1,9 +1,9 @@
 class Logos {
   Logos._();
-  static const String appLogo = 'assets/logo/Binnexa.png';
-  static const String appLogoSVG = 'assets/logo/Binnexa.svg';
-  static const String facebook = 'assets/logo/facebook.png';
-  static const String google = 'assets/logo/google.png';
+  // static const String appLogo = 'assets/logo/Binnexa.png';
+  static const String appLogoSVG = 'assets/logos/onsite.svg';
+  // static const String facebook = 'assets/logo/facebook.png';
+  // static const String google = 'assets/logo/google.png';
 }
 class AuthIcons{
   AuthIcons._();
