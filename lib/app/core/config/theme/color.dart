@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-const Color kPrimaryColor = Color(0xff050505);
-const Color kTitleColor = Color(0xff222222);
-const Color kTextColor = Color(0xff222222);
-const Color kTextColorLight = Color(0xff828282);
-const Color kTextLightColor = Color(0xff828282);
+const Color kPrimaryColor = Color(0xff0074D9);
+const Color kTitleColor = Color(0xff2B2E39);
+const Color kTextColor = Color(0xff2B2E39);
+const Color kTextColorLight = Color(0xff718096);
+
 
 const Color kDisabledColor = Color(0xff828282);
 const Color kDisabledTextColor = Color(0xff9F9F9F);
@@ -12,7 +12,7 @@ const Color kDisabledTextColor = Color(0xff9F9F9F);
 // common
 const Color kScaffoldBGColor = Colors.white;
 const Color kDangerColor = Color(0xffF53D43);
-const Color kSuccessColor = Color(0xff19B265);
+const Color kSuccessColor = Color(0xff3AAB67);
 const Color kInfoColor = Color.fromARGB(255, 2, 120, 255);
 
 // override color

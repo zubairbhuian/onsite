@@ -12,7 +12,7 @@ TabBar customTabBar({
       labelColor: kWhite,
       labelStyle: kBodyLarge,
       unselectedLabelStyle: kBodyLarge,
-      unselectedLabelColor: kTextLightColor,
+      unselectedLabelColor: kTextColorLight,
       labelPadding: const EdgeInsets.only(bottom: 15, top: 8,left: 16,right: 16),
       indicatorPadding: const EdgeInsets.only(bottom: 5),
       dividerColor: kTextColor,
