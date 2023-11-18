@@ -1,3 +1,4 @@
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:onsite/app/widgets/app_indecator.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 import 'package:flutter/material.dart';
@@ -78,18 +79,43 @@ class PopupDialog {
   }
   // Loading Dialog
 
-  static void showLoadingDialog() => base(
-      child: const Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          AppIndecator(),
-          SizedBox(height: 20),
-          Text("Loading"),
-        ],
-      ),
-      padding: const EdgeInsets.all(16),
-      width: 200,
-      barrierDismissible: false);
+  static showLoadingDialog() {
+    return showDialog<void>(
+      // Context
+      context: Get.context!,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Column(
+          // for horizontal minHeight
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // for ertical minWidth
+            Center(
+              child: SizedBox(
+                // dialog width
+                width: 70.w,
+                height: 70.w,
+                child: Material(
+                  elevation: 2,
+                  // dialog color
+                  shadowColor: Colors.black12,
+                  // backgraund color
+                  color: kWhite,
+                  // border radius
+                  borderRadius: BorderRadius.circular(8.r),
+                  // main body
+                  child:  SpinKitFadingCircle(
+                    color: kPrimaryColor, // You can customize the color
+                    size: 42.sp, // You can customize the size
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   /// permission dioalg
   static void permission(
@@ -155,8 +181,8 @@ class PopupDialog {
                       PrimaryBtn(
                           width: 120.w,
                           padding: const EdgeInsets.symmetric(vertical: 12),
-                           child: Text('Yes') ,
-                          onPressed: ontap),
+                          onPressed: ontap,
+                          child: const Text('Yes')),
                     ],
                   )
                 ],

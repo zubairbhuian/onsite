@@ -11,6 +11,7 @@ import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/routes/app_pages.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 import 'package:onsite/app/widgets/custom_textfield.dart';
+import 'package:onsite/app/widgets/popup_dialogs.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -77,7 +78,7 @@ class LoginView extends GetView<LoginController> {
                           // Go to Forget Password page
                           Get.toNamed(Routes.FORGET_PASS);
                         },
-                        child: const Text("Forget Password?")),
+                        child:  Text("Forget Password?",style: kBodyLarge.copyWith(color: kPrimaryColor),)),
                   ),
                   24.height,
                   GetBuilder<LoginController>(builder: (controller) {
@@ -87,26 +88,10 @@ class LoginView extends GetView<LoginController> {
                       onPressed: isClicked
                           ? null
                           : () {
-                              try {
-                                //show loading
-                                controller.isLoaded = true;
-                                controller.isClicked = true;
-                                kLogger.e("fdsdf");
-                                controller.update();
-                                // waite some time
-                                Future.delayed(const Duration(seconds: 3), () {
-                                  //hide loading
-                                  controller.isLoaded = false;
-                                  controller.isClicked = false;
-                                  controller.update();
-                                });
-                              } catch (e) {
-                                kLogger.e(e);
-                                //hide loading
-                                controller.isLoaded = false;
-                                controller.isClicked = false;
-                                controller.update();
-                              }
+                              PopupDialog.showLoadingDialog();
+                              Future.delayed(const Duration(seconds: 3), () {
+                                PopupDialog.closeLoadingDialog();
+                              });
                             },
                       child: isClicked
                           ? SpinKitWave(
