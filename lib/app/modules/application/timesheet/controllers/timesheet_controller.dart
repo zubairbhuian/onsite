@@ -1,23 +1,6 @@
 import 'package:get/get.dart';
 
 class TimesheetController extends GetxController {
-  //TODO: Implement TimesheetController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  static TimesheetController get to => Get.find();
+  
 }
