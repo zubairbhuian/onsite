@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
             apiService: apiService,
           ),
           // initialRoute: AppPages.INITIAL,
-          initialRoute: Routes.FORGET_PASS,
+          initialRoute: Routes.APPLICATION,
           getPages: AppPages.routes,
         );
       },
