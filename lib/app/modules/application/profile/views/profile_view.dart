@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
+import 'package:onsite/app/modules/application/profile/views/notifications_view.dart';
+import 'package:onsite/app/modules/application/profile/views/personal_info_view.dart';
 import 'package:onsite/app/modules/application/widgets/prifile_tile_card.dart';
 import 'package:onsite/app/widgets/appbar.dart';
 import 'package:onsite/app/widgets/card.dart';
@@ -32,7 +34,9 @@ class ProfileView extends GetView<ProfileController> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 32),
                 child: AppCard(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const PersonalInfoView());
+                    },
                     color: kWhite,
                     child: Row(
                       children: [
@@ -80,10 +84,18 @@ class ProfileView extends GetView<ProfileController> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 32),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text(
+                        "Other menu",
+                        style: kTitleMedium,
+                      ),
+                      16.height,
                       ProfileTileCard(
                         title: "Notifications",
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => const NotificationsView());
+                        },
                       ),
                       ProfileTileCard(
                         title: "FAQ",
@@ -93,8 +105,7 @@ class ProfileView extends GetView<ProfileController> {
                         title: "Log Out",
                         color: kDangerColor,
                         onTap: () {
-                          PopupDialog.logOutDialog(
-                             );
+                          PopupDialog.logOutDialog();
                         },
                       ),
                       //app version
