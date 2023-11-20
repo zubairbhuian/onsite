@@ -13,32 +13,34 @@ class ApplicationView extends GetView<ApplicationController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ApplicationController>(builder: (controller) {
-      return Scaffold(
-          body: controller.pages[controller.pageIndex],
-          bottomNavigationBar: CustomBottomNav(
-            items: [
-              bottomItem(
-                lavel: 'Home',
-                icon: Icons.home_outlined,
-              ),
-              bottomItem(
-                lavel: 'Schedule',
-                icon: Icons.calendar_month_sharp,
-              ),
-              bottomItem(
-                lavel: 'Timesheet',
-                icon: Icons.pending_actions,
-              ),
-              bottomItem(
-                lavel: 'Job cost',
-                icon:Icons.attach_money_outlined,
-              ),
-              bottomItem(
-                lavel: 'Profile',
-                icon: Icons.person_outline,
-              ),
-            ],
-          ));
+      return SafeArea(
+        child: Scaffold(
+            body: controller.pages[controller.pageIndex],
+            bottomNavigationBar: CustomBottomNav(
+              items: [
+                bottomItem(
+                  lavel: 'Home',
+                  icon: Icons.home_outlined,
+                ),
+                bottomItem(
+                  lavel: 'Schedule',
+                  icon: Icons.calendar_month_sharp,
+                ),
+                bottomItem(
+                  lavel: 'Timesheet',
+                  icon: Icons.pending_actions,
+                ),
+                bottomItem(
+                  lavel: 'Job cost',
+                  icon:Icons.attach_money_outlined,
+                ),
+                bottomItem(
+                  lavel: 'Profile',
+                  icon: Icons.person_outline,
+                ),
+              ],
+            )),
+      );
     });
   }
 }

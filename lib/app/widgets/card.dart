@@ -29,6 +29,7 @@ class AppCard extends StatelessWidget {
     return Card(
       elevation: elevation ?? 4,
       color: color ?? kWhite,
+      surfaceTintColor:color ?? kWhite ,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(8), // Adjust the radius as needed

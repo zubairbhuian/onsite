@@ -13,10 +13,10 @@ class PrimaryBtn extends StatelessWidget {
   final double? borderRadius;
   final double? height;
   final double? width;
-  final double? borderWidth;
   final double? elevation;
   final TextStyle? style;
   final EdgeInsetsGeometry? padding;
+  final BorderSide? side;
 
   const PrimaryBtn({
     Key? key,
@@ -27,10 +27,9 @@ class PrimaryBtn extends StatelessWidget {
     this.style,
     this.height,
     this.width,
-    this.borderWidth,
     this.elevation,
     this.padding,
-    required this.child,
+    required this.child, this.side,
   }) : super(key: key);
 
   @override
@@ -53,17 +52,18 @@ class PrimaryBtn extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 16.r),
           ),
-          side: BorderSide(
-            color: kPrimaryColor,
-            width: borderWidth ?? 0,
-          ),
+          // ****** Border color *******
+          side:side
+          // const BorderSide(
+          //   color: kPrimaryColor,
+          //   width: 0,
+          // ),
         ),
         child: child,
       ),
     );
   }
 }
-
 
 class OutLineBtn extends StatelessWidget {
   final Color? backgroundColor;
@@ -85,7 +85,8 @@ class OutLineBtn extends StatelessWidget {
       this.padding,
       this.height,
       this.width,
-      this.textStyle, required this.child});
+      this.textStyle,
+      required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -117,6 +118,7 @@ class OutLineBtn extends StatelessWidget {
     );
   }
 }
+
 class GradientBtn extends StatelessWidget {
   const GradientBtn({
     super.key,

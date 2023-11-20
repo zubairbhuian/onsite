@@ -72,6 +72,7 @@ class MyApp extends StatelessWidget {
           transitionDuration: const Duration(milliseconds: 500),
           title: 'Mr.Xpert',
           theme: ThemeData(
+            scaffoldBackgroundColor: const Color(0xffF7F9FA),
             fontFamily: Fonts.primary,
             primarySwatch: Colors.blue,
             splashColor: kPrimaryColor.withOpacity(.1),
@@ -86,6 +87,7 @@ class MyApp extends StatelessWidget {
           initialBinding: BaseBinding(
             apiService: apiService,
           ),
+        
           // initialRoute: AppPages.INITIAL,
           initialRoute: Routes.APPLICATION,
           getPages: AppPages.routes,

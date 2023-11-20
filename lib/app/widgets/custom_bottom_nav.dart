@@ -25,8 +25,8 @@ class CustomBottomNav extends StatelessWidget {
           backgroundColor: const Color(0xFFFFFFFF),
           selectedItemColor: kPrimaryColor,
           unselectedItemColor: const Color(0xff9F9F9F),
-          selectedFontSize: 14,
-          unselectedFontSize: 14,
+          selectedFontSize: 14.sp,
+          unselectedFontSize: 14.sp,
           onTap: (index) {
             controller.pageIndex = index;
             controller.update();
