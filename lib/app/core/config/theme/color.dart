@@ -12,7 +12,7 @@ const Color kDisabledTextColor = Color(0xff9F9F9F);
 // common
 const Color kScaffoldBGColor = Colors.white;
 const Color kDangerColor = Color(0xffF53D43);
-const Color kSuccessColor = Color(0xff3AAB67);
+const Color kSuccessColor = Color(0xff2FCC40);
 const Color kInfoColor = Color.fromARGB(255, 2, 120, 255);
 
 // override color

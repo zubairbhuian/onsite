@@ -110,7 +110,7 @@ class OutLineBtn extends StatelessWidget {
                     fontWeight: FontWeight.w500),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
-                  borderRadius ?? 8.r), // Change the border radius value
+                  borderRadius ?? 16.r), // Change the border radius value
             ),
           ),
           onPressed: onPressed,
