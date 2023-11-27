@@ -13,6 +13,7 @@ abstract class Routes {
   static const TIMESHEET = _Paths.APPLICATION + _Paths.TIMESHEET;
   static const JOB_COST = _Paths.APPLICATION + _Paths.JOB_COST;
   static const PROFILE = _Paths.APPLICATION + _Paths.PROFILE;
+  static const JOB_DETAILS = _Paths.JOB_DETAILS;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const TIMESHEET = '/timesheet';
   static const JOB_COST = '/job-cost';
   static const PROFILE = '/profile';
+  static const JOB_DETAILS = '/job-details';
 }

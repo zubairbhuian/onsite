@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/JobDetails/bindings/job_details_binding.dart';
+import '../modules/JobDetails/views/job_details_view.dart';
 import '../modules/application/bindings/application_binding.dart';
 import '../modules/application/home/bindings/home_binding.dart';
 import '../modules/application/home/views/home_view.dart';
@@ -68,6 +70,11 @@ class AppPages {
           binding: ProfileBinding(),
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.JOB_DETAILS,
+      page: () => const JobDetailsView(),
+      binding: JobDetailsBinding(),
     ),
   ];
 }

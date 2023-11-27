@@ -41,7 +41,7 @@ class PrimaryBtn extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          elevation: elevation ?? 2,
+          elevation: elevation ?? 1,
           textStyle: style ?? kLabelLarge.copyWith(color: textColor ?? kWhite),
           disabledBackgroundColor: kPrimaryColor.withOpacity(.8),
           disabledForegroundColor: kWhite,

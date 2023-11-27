@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
+import 'package:onsite/app/routes/app_pages.dart';
 import 'package:onsite/app/widgets/card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 
@@ -81,7 +82,9 @@ class ScheduleCard extends StatelessWidget {
               padding: EdgeInsets.zero,
               height: 25,
               width: 50,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.JOB_DETAILS);
+              },
               style: kBodySmall,
               child: const Text("View")),
         )
