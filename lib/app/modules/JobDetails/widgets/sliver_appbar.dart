@@ -22,7 +22,7 @@ SliverList sliverAppbar() {
           ),
         ),
         Text(
-          'JobDetailsView',
+          'Job Details',
           style: kLabelLarge,
         ),
         const SizedBox(

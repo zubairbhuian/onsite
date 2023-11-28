@@ -21,20 +21,20 @@ class JobDetailBanner extends StatelessWidget {
         const JobDetailRow(
             leftTitle: "Client Name",
             leftValue: "Jane Cooper",
-            rightTitle: "Jane Cooper",
-            rightValue: "Jane Cooper"),
+            rightTitle: "Job Number",
+            rightValue: "JB62736"),
         // row 3
         16.height,
         const JobDetailRow(
-            leftTitle: "Client Name",
-            leftValue: "Jane Cooper",
-            rightTitle: "Jane Cooper",
-            rightValue: "Jane Cooper"),
+            leftTitle: "Start",
+            leftValue: "12 Dec 2022",
+            rightTitle: "End",
+            rightValue: "24 Apr 2023"),
         // row 4
         16.height,
         const JobDetailBottomRow(
-          title: "Jane Cooper",
-          value: "Jane Cooper",
+          title: "JEstimated Hours",
+          value: "78 Hours",
         )
       ],
     );
