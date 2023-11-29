@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
+import 'package:onsite/app/modules/JobDetails/widgets/job_detail_bottomsheet.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/notes_card.dart';
 import 'package:onsite/app/widgets/card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
@@ -22,7 +23,24 @@ class NotesTab extends StatelessWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                   showModalBottomSheet(
+                            isScrollControlled: true,
+                            context: context,
+                            backgroundColor: kWhite,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      topRight: Radius.circular(12)),
+                            ),
+                            builder: (context) {
+                              return SizedBox(
+                                  width: double.infinity,
+                                  height: 360 +
+                                      MediaQuery.of(context).viewInsets.bottom,
+                                  child: JobDetailBottomSheet.addNote());
+                            });
+                },
                 child: Text(
                   "+ Notes",
                   style: kHeadlineMedium,

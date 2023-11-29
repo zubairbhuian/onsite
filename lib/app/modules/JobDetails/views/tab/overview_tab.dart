@@ -4,6 +4,7 @@ import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/address_card.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/client_details_card.dart';
+import 'package:onsite/app/modules/JobDetails/widgets/job_detail_bottomsheet.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 import 'package:onsite/app/widgets/custom_expansion_tile.dart';
 
@@ -46,9 +47,27 @@ class OverviewTab extends StatelessWidget {
               const ClientDetailsCard(),
               12.height,
               // Complete project btn
-              Center(
+              SizedBox(
+                width: double.infinity,
                 child: OutLineBtn(
-                  onPressed: () {},
+                  onPressed: () {
+                     showModalBottomSheet(
+                            isScrollControlled: true,
+                            context: context,
+                            backgroundColor: kWhite,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(12),
+                      topRight: Radius.circular(12)),
+                            ),
+                            builder: (context) {
+                              return SizedBox(
+                                  width: double.infinity,
+                                  height: 440 +
+                                      MediaQuery.of(context).viewInsets.bottom,
+                                  child: JobDetailBottomSheet.completeProject());
+                            });
+                  },
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: const Text("Complete project"),
                 ),

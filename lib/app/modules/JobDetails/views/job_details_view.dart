@@ -53,7 +53,7 @@ class JobDetailsView extends GetView<JobDetailsController> {
                   ),
                 ];
               },
-              body: const TabBarView(
+              body:  TabBarView(
                 children: [
                   OverviewTab(),
                   CostingTab(),

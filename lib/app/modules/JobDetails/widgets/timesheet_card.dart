@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
@@ -8,11 +10,20 @@ import 'package:onsite/app/widgets/custom_btn.dart';
 
 class TimesheetCard extends StatelessWidget {
   final bool isCheckOut;
-  const TimesheetCard({super.key,this.isCheckOut =true});
+  final String? location;
+  final Widget title;
+  final Function()? onTap;
+  const TimesheetCard(
+      {super.key,
+      this.isCheckOut = true,
+      this.onTap,
+      this.location,
+      required this.title});
 
   @override
   Widget build(BuildContext context) {
     return AppCard(
+        onTap: onTap,
         borderRadius: BorderRadius.circular(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,35 +32,41 @@ class TimesheetCard extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.calendar_month_sharp,
-                        size: 19,
-                        color: kTextColor,
-                      ),
-                      8.width,
-                      Expanded(
-                          child: Text(
-                        "24 Oct  2023 ",
-                        style: kLabelLarge,
-                      ))
-                    ],
-                  ),
+                  child: title,
                 ),
                 // Check out btn
-                if(!isCheckOut)
-                PrimaryBtn(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    height: 25,
-                    color: kDangerColor,
-                    onPressed: () {
-                      // Get.toNamed(Routes.JOB_DETAILS);
-                    },
-                    style: kBodySmall,
-                    child: const Text("Check out")),
+                if (!isCheckOut)
+                  PrimaryBtn(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      height: 25,
+                      color: kDangerColor,
+                      onPressed: () {
+                        // Get.toNamed(Routes.JOB_DETAILS);
+                      },
+                      style: kBodySmall,
+                      child: const Text("Check out")),
               ],
             ),
+            if (location != null)
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.location_on_outlined,
+                    size: 20.sp,
+                    color: kTextColorLight,
+                  ),
+                  8.width,
+                  Flexible(
+                      child: Text(
+                    location??"",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: kBodyMedium.copyWith(color: kTextColorLight),
+                  )),
+                ],
+              ).marginOnly(top: 11),
+              
             // row 2
             11.height,
             Row(
