@@ -82,7 +82,7 @@ class VerificationCodeView extends GetView<ForgetPassController> {
                       onPressed: () {
                         PopupDialog.showLoadingDialog();
                         // **** have to remove this delayed function ****
-                        Future.delayed(const Duration(seconds: 2), () {
+                        Future.delayed(const Duration(seconds: 1), () {
                           // page route
                           PopupDialog.closeLoadingDialog();
                           Get.to(() => const CreatNewPasswordView());

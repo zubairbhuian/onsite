@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
+import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/application/home/widgets/home_job_progress.dart';
 import 'package:onsite/app/modules/application/home/widgets/specific_job_card.dart';
@@ -15,8 +16,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
-        title: Text('HomeView'),
+      appBar:  CustomAppBar(
+         title: Text("Home",style: kTitleLarge.copyWith(color: kWhite),),
+        isBackBtnShow: false,
         isPrimary: true,
         centerTitle: true,
         preferredHeight: 155,

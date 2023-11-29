@@ -19,7 +19,8 @@ class ProfileView extends GetView<ProfileController> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: kWhite,
-        appBar: const CustomAppBar(
+        appBar:  CustomAppBar(
+          title: Text("Profile",style: kTitleLarge.copyWith(color: kWhite),),
           isBackBtnShow: false,
           isPrimary: true,
           preferredHeight: 155,

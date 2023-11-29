@@ -1,3 +1,4 @@
+import 'package:flutter_svg/svg.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/services/base/preferences.dart';
@@ -6,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:onsite/app/core/utils/custom_appbar_shape.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/widgets/network_img.dart';
+
+import '../modules/application/profile/views/notifications_view.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool isPrimary;
@@ -28,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.isPrimary = false,
       this.isExtraBtn = false,
       this.isBackBtnShow = true,
-      this.isShadow = false,
+      this.isShadow = true,
       this.centerTitle = true,
       this.title,
       this.onLeading,
@@ -48,15 +51,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       // padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-          color: kWhite, // Adjust the background color of the AppBar
-          boxShadow: isShadow || !isPrimary ? [kAppbarShadow] : []),
+          color: const Color(
+              0xffF7F9FA), // Adjust the background color of the AppBar
+          boxShadow: !isPrimary ? [kAppbarShadow] : []),
       child: AppBar(
           automaticallyImplyLeading: false,
           titleSpacing: 10,
           elevation: 0,
           centerTitle: centerTitle,
-          leadingWidth: isPrimary ? 40 : 40,
-          backgroundColor: kWhite,
+          leadingWidth: 40,
+          backgroundColor: const Color(0xffF7F9FA),
           foregroundColor: kTextColor,
           titleTextStyle: kTitleLarge,
           // appbar leading
@@ -67,10 +71,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               GestureDetector(
                   onTap: onLeading ?? () => Get.back(),
                   child: Container(
+                    decoration: const BoxDecoration(
+                        // color: kRed
+                        ),
                     alignment: Alignment.centerRight,
-                    child: const Icon(
-                      Icons.arrow_back_ios,
-                      size: 20,
+                    child: SvgPicture.asset(
+                      'assets/icons/chevron-left.svg',
+                      width: 24,
+                      height: 24,
                     ),
                   ),
                 )
@@ -125,10 +133,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              'Profile',
-                              style: kTitleMedium.copyWith(color: kWhite),
-                            ),
+                            title ?? const SizedBox.shrink(),
                             const Icon(
                               Icons.settings,
                               color: kWhite,
@@ -174,14 +179,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                                 )
                               ],
                             )),
-                            const Badge(
-                              backgroundColor: kSuccessColor,
-                              smallSize: 8,
-                              child: Icon(
-                                Icons.notifications_outlined,
-                                color: kWhite,
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(() => const NotificationsView());
+                              },
+                              child: const Badge(
+                                backgroundColor: kSuccessColor,
+                                smallSize: 8,
+                                child: Icon(
+                                  Icons.notifications_outlined,
+                                  color: kWhite,
+                                ),
+                                // label: ,
                               ),
-                              // label: ,
                             )
                           ],
                         )

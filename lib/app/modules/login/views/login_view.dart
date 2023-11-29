@@ -89,7 +89,7 @@ class LoginView extends GetView<LoginController> {
                           ? null
                           : () {
                               PopupDialog.showLoadingDialog();
-                              Future.delayed(const Duration(seconds: 3), () {
+                              Future.delayed(const Duration(seconds: 1), () {
                                 PopupDialog.closeLoadingDialog();
                                 Get.offAllNamed(Routes.APPLICATION);
                               });

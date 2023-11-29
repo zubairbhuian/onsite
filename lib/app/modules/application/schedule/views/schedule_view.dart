@@ -19,6 +19,7 @@ class ScheduleView extends GetView<ScheduleController> {
       appBar: const CustomAppBar(
         title: Text("Today's Schedule"),
         centerTitle: true,
+        isBackBtnShow: false,
       ),
       body: DefaultTabController(
         length: 3,

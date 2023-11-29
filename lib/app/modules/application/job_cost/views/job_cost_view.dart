@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/widgets/appbar.dart';
 import '../controllers/job_cost_controller.dart';
 
@@ -9,17 +10,14 @@ class JobCostView extends GetView<JobCostController> {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomAppBar(
-        title: Text('JobCost'),
-        centerTitle: true,
+        title: Text('Job Cost'),
+        isBackBtnShow: false,
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ///
-          ],
-        ),
+      body: Center(
+        child: Text("No Design Found in Figma",style: TextStyle(
+          fontSize: 20,fontWeight: FontWeight.w600,
+          color: kPrimaryColor
+        ),),
       ),
     );
   }

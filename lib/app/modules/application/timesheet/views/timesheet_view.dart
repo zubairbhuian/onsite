@@ -16,7 +16,8 @@ class TimesheetView extends GetView<TimesheetController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-        title: Text('Timesheet'),
+        title: Text('Time Sheet'),
+        isBackBtnShow: false,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
