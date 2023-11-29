@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/forgetPass/controllers/forget_pass_controller.dart';
@@ -15,10 +16,7 @@ class VerificationCodeView extends GetView<ForgetPassController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
-        title: Text('VerificationCodeView'),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
@@ -32,22 +30,45 @@ class VerificationCodeView extends GetView<ForgetPassController> {
                   // titile
                   24.height,
                   Text(
-                    "Hey! Welcome back",
+                    "Verification Code",
                     style: kHeadlineMedium,
                   ),
                   8.height,
                   Text(
-                    "Sign In to your account",
-                    style: kBodyLarge,
+                    "Enter the verification code that we have sent to your phone number",
+                    style: kBodyLarge.copyWith(color: kTextColorLight),
                   ),
                   40.height,
+                  Center(
+                    child: Pinput(
+                        androidSmsAutofillMethod: AndroidSmsAutofillMethod.none,
+                        keyboardType: TextInputType.number,
+                        defaultPinTheme: PinTheme(
+                          width: 56,
+                          height: 56,
+                          textStyle: const TextStyle(
+                              fontSize: 20,
+                              color: kTextColorLight,
+                              fontWeight: FontWeight.w600),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: const Color(0xffACB0C3)),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        )
 
-                  const Pinput(
-                    androidSmsAutofillMethod: AndroidSmsAutofillMethod.none,
-                    // controller: pinController,
-
+                        // controller: pinController,
+                        ),
+                  ),
+                  24.height,
+                  Center(
+                    child: GestureDetector(
+                      onTap: (){},
+                      child: Text(
+                        "Resend Code",
+                        style: kLabelMedium.copyWith(color: kPrimaryColor),
+                      ),
+                    ),
                   )
-                  //form
                 ],
               )),
             ),

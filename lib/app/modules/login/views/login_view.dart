@@ -56,18 +56,15 @@ class LoginView extends GetView<LoginController> {
                       controller: controller.passwordController,
                       obscureText: isHide,
                       hintText: "Password",
-                      prefixIcon:
-                          const Icon(Icons.lock_outlined, color: kTextColor),
+                      prefixIcon: const Icon(Icons.lock_outlined),
                       suffixIcon: GestureDetector(
                         onTap: () {
                           controller.passObscure = !controller.passObscure;
                           controller.update();
                         },
                         child: isHide
-                            ? const Icon(Icons.remove_red_eye_outlined,
-                                color: kTextColor)
-                            : const Icon(Icons.visibility_off_outlined,
-                                color: kTextColor),
+                            ? const Icon(Icons.remove_red_eye_outlined)
+                            : const Icon(Icons.visibility_off_outlined),
                       ),
                     );
                   }),
@@ -78,7 +75,10 @@ class LoginView extends GetView<LoginController> {
                           // Go to Forget Password page
                           Get.toNamed(Routes.FORGET_PASS);
                         },
-                        child:  Text("Forget Password?",style: kBodyLarge.copyWith(color: kPrimaryColor),)),
+                        child: Text(
+                          "Forget Password?",
+                          style: kLabelLarge.copyWith(color: kPrimaryColor),
+                        )),
                   ),
                   24.height,
                   GetBuilder<LoginController>(builder: (controller) {
@@ -91,6 +91,7 @@ class LoginView extends GetView<LoginController> {
                               PopupDialog.showLoadingDialog();
                               Future.delayed(const Duration(seconds: 3), () {
                                 PopupDialog.closeLoadingDialog();
+                                Get.offAllNamed(Routes.APPLICATION);
                               });
                             },
                       child: isClicked

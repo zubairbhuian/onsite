@@ -105,7 +105,7 @@ class CustomTextField extends StatelessWidget {
             // ********** onTap ********
             onTap: onTap,
             // ********** style ********
-            style: style ?? kTitleMedium,
+            style: style ?? kBodyMedium.copyWith(fontWeight: FontWeight.w600),
             // ********** controller ********
             onEditingComplete: onEditingComplete,
             // ********** keyboardType ********
@@ -121,8 +121,10 @@ class CustomTextField extends StatelessWidget {
               contentPadding: padding ??
                   EdgeInsets.symmetric(vertical: 24.h, horizontal: 24.w),
               // ********** prefixIcon ********
+              prefixIconColor: kTextColorLight,
               prefixIcon: prefixIcon,
               // ********** suffixIcon ********
+              suffixIconColor: kTextColorLight,
               suffixIcon: suffixIcon,
               // ********** border ********
               border: OutlineInputBorder(
@@ -144,7 +146,7 @@ class CustomTextField extends StatelessWidget {
                   borderSide: const BorderSide(width: 1, color: kDangerColor)),
               // ********** hintText ********
               hintText: hintText,
-              hintStyle: kTitleMedium.copyWith(color: kTextColorLight),
+              hintStyle: kBodyMedium.copyWith(color: kTextColorLight),
               // ********** label ********
               label: label,
               labelStyle: labelStyle ?? kTitleMedium,

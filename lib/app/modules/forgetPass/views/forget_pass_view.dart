@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/forgetPass/views/verification_code_view.dart';
@@ -29,13 +30,13 @@ class ForgetPassView extends GetView<ForgetPassController> {
                   // titile
                   24.height,
                   Text(
-                    "Hey! Welcome back",
+                    "Forgot Password",
                     style: kHeadlineMedium,
                   ),
                   8.height,
                   Text(
-                    "Sign In to your account",
-                    style: kBodyLarge,
+                    "Select with contact details should we use to reset yout password",
+                    style: kBodyLarge.copyWith(color: kTextColorLight),
                   ),
                   40.height,
                   const CustomTextField(

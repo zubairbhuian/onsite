@@ -16,10 +16,7 @@ class CreatNewPasswordView extends GetView<ForgetPassController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
-        title: Text('CreatNewPasswordView'),
-        centerTitle: true,
-      ),
+      appBar: const CustomAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
@@ -33,56 +30,51 @@ class CreatNewPasswordView extends GetView<ForgetPassController> {
                   // titile
                   24.height,
                   Text(
-                    "Hey! Welcome back",
+                    "Create New Password",
                     style: kHeadlineMedium,
                   ),
                   8.height,
                   Text(
-                    "Sign In to your account",
-                    style: kBodyLarge,
+                    "Your password must be different fromprevious used password",
+                    style: kBodyLarge.copyWith(color: kTextColorLight),
                   ),
                   40.height,
-                
-                  //form
-                    GetBuilder<ForgetPassController>(builder: (controller) {
-                    return CustomTextField(
 
+                  //form
+                  GetBuilder<ForgetPassController>(builder: (controller) {
+                    return CustomTextField(
                       obscureText: controller.passObscure,
                       hintText: "Password",
-                      prefixIcon:
-                          const Icon(Icons.lock_outlined, color: kTextColor),
+                      prefixIcon: const Icon(Icons.lock_outlined),
                       suffixIcon: GestureDetector(
                         onTap: () {
                           controller.passObscure = !controller.passObscure;
                           controller.update();
                         },
                         child: controller.passObscure
-                            ? const Icon(Icons.remove_red_eye_outlined,
-                                color: kTextColor)
-                            : const Icon(Icons.visibility_off_outlined,
-                                color: kTextColor),
+                            ? const Icon(Icons.remove_red_eye_outlined)
+                            : const Icon(Icons.visibility_off_outlined),
                       ),
                     );
                   }),
-                     GetBuilder<ForgetPassController>(builder: (controller) {
+                  GetBuilder<ForgetPassController>(builder: (controller) {
                     return CustomTextField(
-
                       obscureText: controller.confirmPassObscure,
                       hintText: "Confirm password",
-                      prefixIcon:
-                          const Icon(Icons.lock_outlined, color: kTextColor),
+                      prefixIcon: const Icon(Icons.lock_outlined),
                       suffixIcon: Padding(
                         padding: const EdgeInsets.only(right: 10),
                         child: GestureDetector(
                           onTap: () {
-                            controller.confirmPassObscure = !controller.confirmPassObscure;
+                            controller.confirmPassObscure =
+                                !controller.confirmPassObscure;
                             controller.update();
                           },
                           child: controller.confirmPassObscure
-                              ? const Icon(Icons.remove_red_eye_outlined,
-                                  color: kTextColor)
-                              : const Icon(Icons.visibility_off_outlined,
-                                  color: kTextColor),
+                              ? const Icon(Icons.remove_red_eye_outlined)
+                              : const Icon(
+                                  Icons.visibility_off_outlined,
+                                ),
                         ),
                       ),
                     );
@@ -112,7 +104,6 @@ class CreatNewPasswordView extends GetView<ForgetPassController> {
           ],
         ),
       ),
-   
     );
   }
 }
