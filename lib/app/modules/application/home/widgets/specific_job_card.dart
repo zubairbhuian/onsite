@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
+import 'package:onsite/app/modules/application/home/views/check_in_view.dart';
 import 'package:onsite/app/widgets/card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 
@@ -23,9 +25,12 @@ class SpecificJobCard extends StatelessWidget {
           style: kBodyMedium.copyWith(color: kTextColorLight),
         ),
         16.height,
-         OutLineBtn(
-          onPressed: (){},
-          width: double.infinity, child: const Text("Clock in"))
+        OutLineBtn(
+            onPressed: () {
+              Get.to(() => CheckInView());
+            },
+            width: double.infinity,
+            child: const Text("Clock in"))
       ],
     ));
   }

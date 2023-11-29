@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
+import 'package:onsite/app/modules/application/home/views/check_in_view.dart';
 import 'package:onsite/app/widgets/card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 
@@ -34,7 +36,8 @@ class TodayWorkingHoursCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                 const FaIcon(FontAwesomeIcons.stopwatch,color: kTextColorLight),
+                const FaIcon(FontAwesomeIcons.stopwatch,
+                    color: kTextColorLight),
                 12.width,
                 Flexible(
                     child: Text(
@@ -84,7 +87,13 @@ class TodayWorkingHoursCard extends StatelessWidget {
       ),
       //row 5
       19.height,
-      const PrimaryBtn(width: double.infinity, child: Text("Clock in"))
+      PrimaryBtn(
+        width: double.infinity,
+        child: const Text("Clock in"),
+        onPressed: () {
+          Get.to(() => const CheckInView());
+        },
+      )
     ]));
   }
 }
