@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
           ),
         
           // initialRoute: AppPages.INITIAL,
-          initialRoute: Routes.JOB_DETAILS,
+          initialRoute: Routes.APPLICATION,
           getPages: AppPages.routes,
         );
       },

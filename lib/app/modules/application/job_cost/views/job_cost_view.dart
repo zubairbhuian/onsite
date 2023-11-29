@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:onsite/app/widgets/appbar.dart';
 
 import '../controllers/job_cost_controller.dart';
 
@@ -8,17 +9,19 @@ class JobCostView extends GetView<JobCostController> {
   const JobCostView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('JobCostView'),
+    return const Scaffold(
+      appBar: CustomAppBar(
+        title: Text('JobCost'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'JobCostView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body:SingleChildScrollView(
+        padding: EdgeInsetsDirectional.symmetric(horizontal: 24,vertical: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            
+
+        ],),),
     );
   }
 }
