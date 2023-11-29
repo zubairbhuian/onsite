@@ -23,7 +23,7 @@ SliverList sliverAppbar() {
         ),
         Text(
           'Job Details',
-          style: kTitleLarge,
+          style: kTitleMedium,
         ),
         const SizedBox(
           width: 20,

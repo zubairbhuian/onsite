@@ -20,7 +20,7 @@ class ProfileView extends GetView<ProfileController> {
     return Scaffold(
         backgroundColor: kWhite,
         appBar:  CustomAppBar(
-          title: Text("Profile",style: kTitleLarge.copyWith(color: kWhite),),
+          title: Text("Profile",style: kTitleMedium.copyWith(color: kWhite),),
           isBackBtnShow: false,
           isPrimary: true,
           preferredHeight: 155,

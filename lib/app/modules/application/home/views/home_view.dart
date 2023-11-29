@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
       appBar: CustomAppBar(
         title: Text(
           "Home",
-          style: kTitleLarge.copyWith(color: kWhite),
+          style: kTitleMedium.copyWith(color: kWhite),
         ),
         isBackBtnShow: false,
         isPrimary: true,

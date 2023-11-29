@@ -62,7 +62,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           leadingWidth: 40,
           backgroundColor: const Color(0xffF7F9FA),
           foregroundColor: kTextColor,
-          titleTextStyle: kTitleLarge,
+          titleTextStyle: kTitleMedium,
           // appbar leading
           leading: isBackBtnShow
               ?
