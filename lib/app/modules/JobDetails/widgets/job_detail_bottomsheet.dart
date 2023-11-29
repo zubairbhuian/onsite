@@ -5,10 +5,8 @@ import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/dot_container.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/sheet_divider.dart';
-import 'package:onsite/app/modules/JobDetails/widgets/timesheet_card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 import 'package:onsite/app/widgets/custom_textfield.dart';
-import 'package:onsite/app/widgets/progress_container.dart';
 
 class JobDetailBottomSheet {
   // **** Add Node ******

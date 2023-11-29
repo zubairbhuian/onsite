@@ -27,7 +27,7 @@ class SpecificJobCard extends StatelessWidget {
         16.height,
         OutLineBtn(
             onPressed: () {
-              Get.to(() => CheckInView());
+              Get.to(() => const CheckInView());
             },
             width: double.infinity,
             child: const Text("Clock in"))

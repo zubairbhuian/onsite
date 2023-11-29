@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:onsite/app/core/config/theme/style.dart';
 
 class LoginController extends GetxController {
   static LoginController get to => Get.find();

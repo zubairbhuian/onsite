@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
@@ -9,7 +8,11 @@ class ProfileTileCard extends StatelessWidget {
   final Color? color;
   final bool isDivider;
   const ProfileTileCard(
-      {super.key, required this.title, this.onTap, this.color,  this.isDivider=true});
+      {super.key,
+      required this.title,
+      this.onTap,
+      this.color,
+      this.isDivider = true});
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +36,11 @@ class ProfileTileCard extends StatelessWidget {
             ),
           ),
         ),
-        if(isDivider)
-        const Divider(
-          color: kDisabledColor,
-          thickness: .79,
-        )
+        if (isDivider)
+          const Divider(
+            color: kDisabledColor,
+            thickness: .79,
+          )
       ],
     );
   }

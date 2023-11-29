@@ -1,7 +1,6 @@
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/services/base/preferences.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:onsite/app/core/utils/custom_appbar_shape.dart';

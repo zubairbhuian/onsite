@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/forgetPass/views/verification_code_view.dart';
@@ -70,7 +68,6 @@ class ForgetPassView extends GetView<ForgetPassController> {
           ],
         ),
       ),
-   
     );
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'package:get/get.dart';
 import 'package:onsite/app/widgets/bottom_item.dart';
 import 'package:onsite/app/widgets/custom_bottom_nav.dart';
@@ -32,7 +30,7 @@ class ApplicationView extends GetView<ApplicationController> {
                 ),
                 bottomItem(
                   lavel: 'Job cost',
-                  icon:Icons.attach_money_outlined,
+                  icon: Icons.attach_money_outlined,
                 ),
                 bottomItem(
                   lavel: 'Profile',

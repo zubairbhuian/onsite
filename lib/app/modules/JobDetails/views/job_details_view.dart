@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/modules/JobDetails/views/tab/costing_tab.dart';
 import 'package:onsite/app/modules/JobDetails/views/tab/job_completed_tab.dart';
 import 'package:onsite/app/modules/JobDetails/views/tab/notes_tab.dart';
@@ -53,7 +51,7 @@ class JobDetailsView extends GetView<JobDetailsController> {
                   ),
                 ];
               },
-              body:  TabBarView(
+              body: const TabBarView(
                 children: [
                   OverviewTab(),
                   CostingTab(),

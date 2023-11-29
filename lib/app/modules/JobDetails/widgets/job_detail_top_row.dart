@@ -19,7 +19,7 @@ class JobDetailTopRow extends StatelessWidget {
         Expanded(
             child: Text(
           title,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
         )),
         Expanded(
             child: Container(

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/forgetPass/controllers/forget_pass_controller.dart';
 import 'package:onsite/app/routes/app_pages.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
-import 'package:onsite/app/widgets/popup_dialogs.dart';
 
 class PasswordChangedView extends GetView<ForgetPassController> {
   const PasswordChangedView({Key? key}) : super(key: key);

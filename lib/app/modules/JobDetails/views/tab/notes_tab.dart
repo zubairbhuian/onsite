@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:onsite/app/core/config/theme/color.dart';
 import 'package:onsite/app/core/config/theme/style.dart';
 import 'package:onsite/app/core/utils/int_extensions.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/job_detail_bottomsheet.dart';
 import 'package:onsite/app/modules/JobDetails/widgets/notes_card.dart';
-import 'package:onsite/app/widgets/card.dart';
 import 'package:onsite/app/widgets/custom_btn.dart';
 
 class NotesTab extends StatelessWidget {
