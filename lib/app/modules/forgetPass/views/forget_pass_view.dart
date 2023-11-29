@@ -15,58 +15,60 @@ class ForgetPassView extends GetView<ForgetPassController> {
   const ForgetPassView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // titile
-                  24.height,
-                  Text(
-                    "Forgot Password",
-                    style: kHeadlineMedium,
-                  ),
-                  8.height,
-                  Text(
-                    "Select with contact details should we use to reset yout password",
-                    style: kBodyLarge.copyWith(color: kTextColorLight),
-                  ),
-                  40.height,
-                  const CustomTextField(
-                    hintText: "Email",
-                    prefixIcon: Icon(Icons.email_outlined),
-                  ),
-                  //form
-                ],
-              )),
-            ),
-
-            // bottom bar
-            SizedBox(
-              height: 100,
-              width: double.infinity,
-              child: Center(
-                  child: PrimaryBtn(
-                      onPressed: () {
-                        PopupDialog.showLoadingDialog();
-                        // **** have to remove this delayed function ****
-                        Future.delayed(const Duration(seconds: 1), () {
-                          // page route
-                          PopupDialog.closeLoadingDialog();
-                          Get.to(() => const VerificationCodeView());
-                        });
-                      },
-                      width: double.infinity,
-                      child: const Text("Continue"))),
-            )
-          ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: const CustomAppBar(),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                    child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // titile
+                    24.height,
+                    Text(
+                      "Forgot Password",
+                      style: kHeadlineMedium,
+                    ),
+                    8.height,
+                    Text(
+                      "Select with contact details should we use to reset yout password",
+                      style: kBodyLarge.copyWith(color: kTextColorLight),
+                    ),
+                    40.height,
+                    const CustomTextField(
+                      hintText: "Email",
+                      prefixIcon: Icon(Icons.email_outlined),
+                    ),
+                    //form
+                  ],
+                )),
+              ),
+      
+              // bottom bar
+              SizedBox(
+                height: 100,
+                width: double.infinity,
+                child: Center(
+                    child: PrimaryBtn(
+                        onPressed: () {
+                          PopupDialog.showLoadingDialog();
+                          // **** have to remove this delayed function ****
+                          Future.delayed(const Duration(seconds: 1), () {
+                            // page route
+                            PopupDialog.closeLoadingDialog();
+                            Get.to(() => const VerificationCodeView());
+                          });
+                        },
+                        width: double.infinity,
+                        child: const Text("Continue"))),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -10,7 +10,7 @@ import '../schedule/views/schedule_view.dart';
 class ApplicationController extends GetxController {
   static ApplicationController get to => Get.find();
 
-    int pageIndex = 2;
+    int pageIndex = 0;
   bool isActiveExpert = false;
   List<Widget> pages = [
     const HomeView(),
